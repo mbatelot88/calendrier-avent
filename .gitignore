@@ -1,0 +1,5 @@
+# Fichiers de configuration locale / scripts privés
+push-github.ps1
+*.tmp
+.DS_Store
+Thumbs.db
