@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendrier de l'Avent | Grandblaise Leroy - Pièces Auto & Industrie</title>
+  <meta name="description" content="Découvrez chaque jour une surprise de Noël : outillage pro, codes promo et équipements avec le calendrier de l'Avent Grandblaise Leroy.">
+  
+  <!-- Polices Google Fonts (Élégantes & Festives) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Feuille de styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Guirlande de Noël animée avec ampoules clignotantes -->
+  <div class="christmas-garland" aria-hidden="true">
+    <div class="garland-wire"></div>
+    <ul class="garland-lights" id="garlandLights">
+      <li class="light light-red"></li>
+      <li class="light light-gold"></li>
+      <li class="light light-green"></li>
+      <li class="light light-amber"></li>
+      <li class="light light-blue"></li>
+      <li class="light light-red"></li>
+      <li class="light light-gold"></li>
+      <li class="light light-green"></li>
+      <li class="light light-amber"></li>
+      <li class="light light-blue"></li>
+      <li class="light light-red"></li>
+      <li class="light light-gold"></li>
+      <li class="light light-green"></li>
+      <li class="light light-amber"></li>
+      <li class="light light-blue"></li>
+      <li class="light light-red"></li>
+      <li class="light light-gold"></li>
+      <li class="light light-green"></li>
+      <li class="light light-amber"></li>
+      <li class="light light-blue"></li>
+      <li class="light light-red"></li>
+      <li class="light light-gold"></li>
+      <li class="light light-green"></li>
+      <li class="light light-amber"></li>
+    </ul>
+  </div>
+
+  <!-- DÉCORS LATÉRAUX DE NOËL (CÔTÉ GAUCHE) -->
+  <aside class="side-decor side-decor-left" aria-hidden="true">
+    <!-- Boules de Noël suspendues animées -->
+    <div class="hanging-ornament ornament-1">
+      <div class="ornament-string"></div>
+      <div class="ornament-cap"></div>
+      <div class="ornament-bauble bauble-red">
+        <span class="bauble-pattern">❄</span>
+      </div>
+    </div>
+    <div class="hanging-ornament ornament-2">
+      <div class="ornament-string"></div>
+      <div class="ornament-cap"></div>
+      <div class="ornament-bauble bauble-gold">
+        <span class="bauble-pattern">⚙️</span>
+      </div>
+    </div>
+    <div class="hanging-ornament ornament-3">
+      <div class="ornament-string"></div>
+      <div class="ornament-cap"></div>
+      <div class="ornament-bauble bauble-green">
+        <span class="bauble-pattern">✦</span>
+      </div>
+    </div>
+
+    <!-- Sapin de Noël & Cadeaux empilés (Bas Gauche) -->
+    <div class="side-ground-decor">
+      <div class="christmas-tree">
+        <div class="tree-star">★</div>
+        <div class="tree-layer layer-top"></div>
+        <div class="tree-layer layer-mid"></div>
+        <div class="tree-layer layer-bottom"></div>
+        <div class="tree-trunk"></div>
+        <div class="tree-light tree-light-1"></div>
+        <div class="tree-light tree-light-2"></div>
+        <div class="tree-light tree-light-3"></div>
+      </div>
+      <!-- Cadeaux -->
+      <div class="gifts-pile">
+        <div class="gift-box gift-red">
+          <div class="gift-ribbon-v"></div>
+          <div class="gift-ribbon-h"></div>
+          <div class="gift-bow"></div>
+        </div>
+        <div class="gift-box gift-gold">
+          <div class="gift-ribbon-v"></div>
+          <div class="gift-ribbon-h"></div>
+          <div class="gift-bow"></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- DÉCORS LATÉRAUX DE NOËL (CÔTÉ DROIT) -->
+  <aside class="side-decor side-decor-right" aria-hidden="true">
+    <!-- Boules de Noël suspendues animées -->
+    <div class="hanging-ornament ornament-4">
+      <div class="ornament-string"></div>
+      <div class="ornament-cap"></div>
+      <div class="ornament-bauble bauble-gold">
+        <span class="bauble-pattern">★</span>
+      </div>
+    </div>
+    <div class="hanging-ornament ornament-5">
+      <div class="ornament-string"></div>
+      <div class="ornament-cap"></div>
+      <div class="ornament-bauble bauble-red">
+        <span class="bauble-pattern">❄</span>
+      </div>
+    </div>
+    <div class="hanging-ornament ornament-6">
+      <div class="ornament-string"></div>
+      <div class="ornament-cap"></div>
+      <div class="ornament-bauble bauble-amber">
+        <span class="bauble-pattern">⚙️</span>
+      </div>
+    </div>
+
+    <!-- Sapin de Noël & Cadeaux empilés (Bas Droit) -->
+    <div class="side-ground-decor">
+      <div class="christmas-tree">
+        <div class="tree-star">★</div>
+        <div class="tree-layer layer-top"></div>
+        <div class="tree-layer layer-mid"></div>
+        <div class="tree-layer layer-bottom"></div>
+        <div class="tree-trunk"></div>
+        <div class="tree-light tree-light-4"></div>
+        <div class="tree-light tree-light-5"></div>
+        <div class="tree-light tree-light-6"></div>
+      </div>
+      <!-- Cadeaux -->
+      <div class="gifts-pile">
+        <div class="gift-box gift-green">
+          <div class="gift-ribbon-v"></div>
+          <div class="gift-ribbon-h"></div>
+          <div class="gift-bow"></div>
+        </div>
+        <div class="gift-box gift-red-small">
+          <div class="gift-ribbon-v"></div>
+          <div class="gift-ribbon-h"></div>
+          <div class="gift-bow"></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Canvas pour flocons de neige doux et confettis dorés -->
+  <canvas id="snowCanvas" class="snow-canvas" aria-hidden="true"></canvas>
+
+  <!-- En-tête festif -->
+  <header class="advent-header">
+    <div class="header-container">
+      <div class="brand-badge">
+        <span class="brand-icon">⚙️</span>
+        <span>Grandblaise Leroy • Pièces Auto & Industrie</span>
+      </div>
+      
+      <h1 class="advent-title">
+        <span>Calendrier de l’avent Grandblaise Leroy – Schoettlé
+      </h1>
+      
+      <p class="advent-intro">
+        Chaque jour de décembre, découvrez une surprise exclusive pour vos ateliers, vos véhicules et vos chantiers : 
+        <strong>petit outillage professionnel</strong>, <strong>codes promotionnels</strong>, équipements et cadeaux d'exception !
+      </p>
+
+      <!-- Indicateur de statut du jour -->
+      <div class="today-status" id="todayStatus">
+        <span class="status-icon">🎄</span>
+        <span class="status-text" id="statusText">Chargement de la date...</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Grille des 24 cases du calendrier -->
+  <main class="calendar-wrapper">
+    <div class="calendar-grid" id="calendarGrid" aria-label="Cases du calendrier de l'Avent">
+      <!-- Les 24 cases sont générées dynamiquement par script.js -->
+    </div>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="advent-footer">
+    <div class="footer-content">
+      <p><strong>Grandblaise Leroy</strong> — Spécialiste de la pièce détachée automobile & fourniture industrielle.</p>
+      <p class="copyright">© <span id="currentYear"></span> <a href="https://www.grandblaise-leroy.fr" target="_blank" rel="noopener">www.grandblaise-leroy.fr</a> — Joyeuses Fêtes de fin d'année ! 🎁</p>
+    </div>
+  </footer>
+
+  <!-- Modale de révélation du cadeau / outillage / code promo -->
+  <div class="modal-backdrop" id="giftModal" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Fermer la boîte de dialogue">✕</button>
+      
+      <div class="modal-decor-ribbon">
+        <span id="modalRibbonTitle">🎁 Cadeau du Jour • Grandblaise Leroy</span>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-media-wrapper">
+          <img id="modalImage" class="modal-image" src="" alt="Surprise du jour" loading="lazy">
+          <div class="modal-day-tag" id="modalDayTag">Case 1</div>
+        </div>
+
+        <div class="modal-info">
+          <div class="modal-badge-wrapper">
+            <span class="modal-badge" id="modalBadge">Outillage Pro</span>
+            <span class="modal-category" id="modalCategory">Auto & Industrie</span>
+          </div>
+          <h2 class="modal-title" id="modalTitle">Titre de la surprise</h2>
+          <h3 class="modal-subtitle" id="modalSubtitle">Sous-titre festif</h3>
+          <p class="modal-desc" id="modalDescription">Description détaillée...</p>
+          
+          <!-- Bloc code promo éventuel -->
+          <div class="promo-box" id="promoBox" style="display: none;">
+            <span class="promo-label">Votre Code Avantage :</span>
+            <div class="promo-code-container">
+              <strong class="promo-code" id="promoCodeText">NOEL-AUTO10</strong>
+              <button type="button" class="btn-copy" id="btnCopyPromo" title="Copier le code">Copier</button>
+            </div>
+          </div>
+
+          <div class="modal-actions" id="modalActions">
+            <a href="#" id="modalLink" class="btn-primary" target="_blank" rel="noopener">
+              <span id="modalLinkText">En profiter chez Grandblaise Leroy</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Conteneur de notification Toast -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Barre d'outils Développeur / Test -->
+  <aside class="dev-toolbar" id="devToolbar">
+    <div class="dev-toolbar-header">
+      <span class="dev-icon">🛠️</span>
+      <strong>Mode Test Développeur</strong>
+      <button id="toggleDevDetails" class="btn-dev-minimize" title="Réduire / Agrandir">−</button>
+    </div>
+    <div class="dev-toolbar-content" id="devToolbarContent">
+      <p class="dev-hint">Simulez une date pour tester le déverrouillage sans attendre décembre :</p>
+      <div class="dev-controls">
+        <label for="devDateInput">Date simulée :</label>
+        <input type="date" id="devDateInput">
+        <button id="btnApplyDevDate" class="btn-dev">Appliquer la date</button>
+        <button id="btnUnlockAll" class="btn-dev btn-dev-secondary">Tout débloquer</button>
+        <button id="btnResetStorage" class="btn-dev btn-dev-danger">Réinitialiser mémoire</button>
+      </div>
+      <div class="dev-current-info" id="devCurrentInfo"></div>
+    </div>
+  </aside>
+
+  <!-- Script interactif -->
+  <script src="script.js"></script>
+</body>
+</html>
