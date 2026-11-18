@@ -737,44 +737,74 @@ body::before {
   box-shadow: var(--shadow-door);
 }
 
-/* Face Arrière (Image de la surprise & outil révélé) */
+/* Face Arrière de la case (Révélation Festive & Cadeau sans image externe) */
 .door-back {
   position: absolute;
   inset: 0;
   border-radius: 14px;
   overflow: hidden;
-  background: #18221c;
+  background: radial-gradient(circle at 50% 35%, #1d3325 0%, #102117 65%, #09130d 100%);
   border: 2px solid var(--color-gold);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.5rem 0.55rem;
   transform: rotateY(0deg);
   z-index: 1;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
-.door-back img {
+.door-back::before {
+  content: "";
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  inset: 4px;
+  border: 1px dashed rgba(247, 213, 124, 0.35);
+  border-radius: 9px;
+  pointer-events: none;
 }
 
-.calendar-door:hover .door-back img {
-  transform: scale(1.08);
+.door-back-badge {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-gold-light);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(201, 147, 38, 0.35);
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.door-back-icon {
+  font-size: clamp(1.9rem, 3.2vw, 2.4rem);
+  line-height: 1;
+  margin: auto 0;
+  z-index: 2;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+  animation: iconPulse 2.5s infinite alternate ease-in-out;
+}
+
+@keyframes iconPulse {
+  0% { transform: scale(0.96); }
+  100% { transform: scale(1.08); filter: drop-shadow(0 0 10px rgba(247, 213, 124, 0.6)); }
 }
 
 .door-back-caption {
   position: relative;
   z-index: 2;
-  background: linear-gradient(to top, rgba(14, 20, 16, 0.95) 0%, rgba(14, 20, 16, 0.6) 70%, transparent 100%);
-  padding: 0.5rem 0.4rem;
+  background: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  padding: 0.35rem 0.3rem;
   text-align: center;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  color: var(--color-gold-light);
-  letter-spacing: 0.03em;
+  color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid rgba(247, 213, 124, 0.25);
+  letter-spacing: 0.02em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1050,39 +1080,76 @@ body::before {
   }
 }
 
-.modal-media-wrapper {
+.modal-card-emblem {
   position: relative;
-  flex: 0 0 220px;
+  flex: 0 0 200px;
   aspect-ratio: 1 / 1;
-  border-radius: 14px;
+  border-radius: 18px;
+  border: 2.5px solid var(--color-gold);
+  background: radial-gradient(circle at 45% 35%, #991b1b 0%, #6e0c0c 60%, #3d0505 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px rgba(110, 12, 12, 0.35), inset 0 0 25px rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  border: 2px solid var(--color-gold);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  background: #f7f9fa;
+}
+
+.modal-emblem-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(247, 213, 124, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.modal-card-emblem::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1.5px dashed rgba(247, 213, 124, 0.4);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.modal-gift-icon {
+  font-size: 4.8rem;
+  line-height: 1;
+  filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.5));
+  animation: giftBounce 3s infinite ease-in-out;
+  z-index: 2;
+}
+
+@keyframes giftBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-6px) scale(1.06); }
 }
 
 @media (max-width: 640px) {
-  .modal-media-wrapper {
+  .modal-card-emblem {
     flex: 0 0 auto;
-    width: 180px;
+    width: 160px;
+    height: 160px;
   }
-}
-
-.modal-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  .modal-gift-icon {
+    font-size: 3.8rem;
+  }
 }
 
 .modal-day-tag {
   position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background: rgba(20, 25, 22, 0.9);
+  bottom: 10px;
+  background: rgba(14, 20, 16, 0.9);
   color: var(--color-gold-light);
   font-family: var(--font-serif);
-  font-size: 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.22rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid var(--color-gold);
+  z-index: 2;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
   font-weight: 700;
   padding: 0.2rem 0.65rem;
   border-radius: 6px;
