@@ -2,7 +2,7 @@
  * ==============================================================================
  * CALENDRIER DE L'AVENT INTERACTIF - GRANDBLAISE LEROY – SCHOETTLÉ
  * Pièces Automobiles, Outillage Professionnel & Fourniture Industrielle
- * Textes officiels issus de calendar.txt
+ * Données synchronisées avec calendar.txt & visuels du dossier Lots (1.jpg à 24.jpg)
  * ==============================================================================
  */
 
@@ -12,7 +12,7 @@ const CONFIG = {
   SHOW_DEV_TOOLBAR: true,
 
   // Clé pour le stockage dans le navigateur
-  STORAGE_KEY: 'grandblaise_advent_opened_v3',
+  STORAGE_KEY: 'grandblaise_advent_opened_v4',
 
   // Année cible (2026)
   TARGET_YEAR: 2026,
@@ -23,32 +23,30 @@ const CONFIG = {
 
 /**
  * ==============================================================================
- * CONFIGURATION CENTRALISÉE DES 24 SURPRISES (calendar.txt)
- * Chaque jour contient son message officiel, son badge et son icône festive.
- * Aucune dépendance aux images externes du dossier Cases.
+ * CONFIGURATION CENTRALISÉE DES 24 CADEAUX (Texte calendar.txt + Images Lots)
  * ==============================================================================
  */
 const adventGifts = [
   {
     day: 1,
-    title: "Gamme d'Entretien SHINE",
+    title: "Gamme de Nettoyage Automobile SHINE",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Entretien Auto",
-    badge: "Cadeau Offert",
-    icon: "🧽",
-    description: "Dès 50 € d'achats sur toute la gamme d'entretien SHINE, une microfibre offerte.",
-    promoCode: "SHINE-NOEL",
+    category: "Entretien Automobile",
+    badge: "Microfibre Offerte",
+    image: "./Lots/1.jpg",
+    description: "Dès 50 € d'achat sur toute la gamme de nettoyage automobile SHINE, une microfibre offerte",
+    promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 2,
-    title: "Pack Dégivrant & Lave-Glace",
+    title: "Pack Dégivrant & Lave-Glace Hiver",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Hiver & Visibilité",
-    badge: "Pack Promo 8,99 €",
-    icon: "❄️",
-    description: "Offre promotionnelle dégivrant et lave-glace : le pack à 8,99 € TTC.",
+    category: "Spécial Hiver",
+    badge: "Le Pack à 8,99 €",
+    image: "./Lots/2.jpg",
+    description: "Le pack dégivrant et lave-glace hiver à 8,99€",
     promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
@@ -57,250 +55,250 @@ const adventGifts = [
     day: 3,
     title: "Éclairage d'Atelier ISOTECH",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Éclairage Pro",
-    badge: "Remise -20%",
-    icon: "💡",
-    description: "20 % de remise sur une sélection d'éclairage ISOTECH (petites, grandes et moyennes baladeuses, frontales, projecteurs, lampes de capot, mini-projecteurs LED, lampes stylo).",
-    promoCode: "ISOTECH-20",
+    category: "Éclairage Professionnel",
+    badge: "-20% de Remise",
+    image: "./Lots/3.jpg",
+    description: "20 % de remise sur une sélection d'éclairage ISOTECH (petite, moyenne et grande baladeuses, frontale, projecteur, lampe de capot, mini-projecteur LED et lampe stylo)",
+    promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 4,
-    title: "Sélection LEVEROK",
+    title: "Offre Sélection LEVEROK",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Fidélité & Outillage",
-    badge: "20% en Cagnotte",
-    icon: "🪙",
-    description: "20 % sur votre cagnotte dès 3 produits LEVEROK du catalogue achetés.",
-    promoCode: "LEVEROK-CAGNOTTE",
+    category: "Outillage LEVEROK",
+    badge: "20% en Bon d'Achat",
+    image: "./Lots/4.jpg",
+    description: "20 % remboursés en bon d’achat pour l’achat de 3 produits LEVEROK",
+    promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 5,
-    title: "Boîte à Outils LEVEROK",
+    title: "Jeu Concours : Boîte à Outils LEVEROK",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Jeu Concours",
+    category: "Jeu Concours Atelier",
     badge: "Jeu Concours 🎁",
-    icon: "🧰",
-    description: "Jeu concours : devinez le prix et remportez la boîte à outils LEVEROK (Réf. LRKOUT-BAO).",
+    image: "./Lots/5.jpg",
+    description: "Jeu concours : devinez le prix et remportez la boîte à outils LEVEROK (1 gagnant par département)",
     promoCode: null,
     linkText: "Participer au jeu en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 6,
-    title: "Set de Tournevis LEVEROK",
+    title: "Jeu Concours : Produit Mystère",
     subtitle: "Grandblaise Leroy – Schoettlé",
     category: "Jeu Concours Saint-Nicolas",
     badge: "Saint-Nicolas 🎁",
-    icon: "🪛",
-    description: "Jeu concours : remportez le set de tournevis LEVEROK (Réf. LRKOUT-TRNVS8).",
+    image: "./Lots/6.jpg",
+    description: "Jeu concours : devinez le produit mystère ? (1 gagnant par département)",
     promoCode: null,
     linkText: "Participer au jeu en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 7,
-    title: "Rénovation d'Optiques de Phares",
+    title: "Rénovateur d'Optiques & Polisseuse LEVEROK",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Rénovation Optique",
-    badge: "Offre Spéciale",
-    icon: "✨",
-    description: "Offre commerciale sur la rénovation d'optiques de phares Holts & Autobest + polisseuse LEVEROK.",
+    category: "Rénovation & Carrosserie",
+    badge: "Le Pack à 119,80 €",
+    image: "./Lots/7.jpg",
+    description: "Le pack de rénovateur d’optique de phare Holts + la polisseuse Leverok à 119.80€",
     promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 8,
-    title: "Éclairage Automobile OSRAM",
+    title: "Coffrets d’Ampoules OSRAM",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Éclairage Véhicule",
-    badge: "Offre Commerciale",
-    icon: "🚘",
-    description: "Offre commerciale sur l'éclairage automobile OSRAM (Réfs. CLKH1H7, CLKH4, CLKH7).",
+    category: "Éclairage Automobile",
+    badge: "Offres Exclusives",
+    image: "./Lots/8.jpg",
+    description: "Offres exclusives sur les coffrets d’ampoules OSRAM en H1-H7, H4 et H7",
     promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 9,
-    title: "Compresseurs ISOTECH",
+    title: "Compresseurs 50L & 100L ISOTECH",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Équipement Atelier",
-    badge: "40 € à 50 € Cagnotte",
-    icon: "⚙️",
-    description: "De 40 € à 50 € reversés en cagnotte sur une sélection de compresseurs ISOTECH.",
+    category: "Air Comprimé & Atelier",
+    badge: "Jusqu'à 50€ Offerts",
+    image: "./Lots/9.jpg",
+    description: "Pour l’achat d’un compresseur 50L Isotech, 40€ de bon d’achat / Pour l’achat d’un compresseur 100L Isotech, 50€ de bon d’achat",
     promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 10,
-    title: "Batteries & Équipements de Démarrage",
+    title: "Batterie, Charge & Démarrage",
     subtitle: "Grandblaise Leroy – Schoettlé",
     category: "Énergie & Démarrage",
-    badge: "Offres Spéciales",
-    icon: "🔋",
-    description: "Plusieurs offres commerciales sur une sélection de batteries, chargeurs et équipements de démarrage (hors alternateurs).",
+    badge: "15€ Remboursés",
+    image: "./Lots/10.jpg",
+    description: "Offres exclusives sur la sélection batterie, charge et démarrage du dépliant. 15€ remboursé sur la reprise sur votre ancienne batterie.",
     promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 11,
-    title: "Mallettes ISOTECH",
+    title: "Mallette & Servantes ISOTECH / LEVEROK",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Rangement & Outillage",
-    badge: "20 € en Cagnotte",
-    icon: "💼",
-    description: "20 € de cagnotte sur les mallettes ISOTECH.",
+    category: "Rangement & Maintenance",
+    badge: "Jusqu'à 60€ en Bon",
+    image: "./Lots/11.jpg",
+    description: "Profitez de 20 € de bon d’achat sur la mallette de maintenance ISOTECH / 40€ de bon d’achat sur la servante LEVEROK / 60€ de bon d’achat sur la servante ISOTECH",
     promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 12,
-    title: "Lampe d'Inspection CLAS",
+    title: "Jeu Concours : Produit Mystère",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Jeu Concours",
+    category: "Jeu Concours Mystère",
     badge: "Jeu Concours 🎁",
-    icon: "🔦",
-    description: "Jeu concours : remportez la lampe CLAS (Réf. CLEOE 0145BL).",
+    image: "./Lots/12.jpg",
+    description: "Jeu concours : devinez le produit mystère ? (1 gagnant par département)",
     promoCode: null,
     linkText: "Participer au jeu en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 13,
-    title: "Mini-Coffret à Cliquet CLAS",
+    title: "Jeu Concours : Mini-Coffret à Cliquet CLAS",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Jeu Concours",
+    category: "Jeu Concours Outillage",
     badge: "Jeu Concours 🎁",
-    icon: "🔧",
-    description: "Jeu concours : devinez le prix et remportez le mini-coffret à cliquet CLAS (Réf. CLEOS 1050).",
+    image: "./Lots/13.jpg",
+    description: "Jeu concours : devinez le prix et remportez le mini-coffret à cliquet CLAS (1 gagnant par département)",
     promoCode: null,
     linkText: "Participer au jeu en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 14,
-    title: "Les Indispensables DEWALT",
+    title: "Outillage DEWALT x McLaren",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Électroportatif Pro",
-    badge: "Remise Immédiate",
-    icon: "⚡",
-    description: "Remise immédiate sur les indispensables de l'outillage DEWALT.",
-    promoCode: "DEWALT-IMMEDIAT",
+    category: "Électroportatif Haute Performance",
+    badge: "Édition McLaren",
+    image: "./Lots/14.jpg",
+    description: "Offres exclusives sur l’outillage DEWALT x McLaren",
+    promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 15,
-    title: "Lot de Bombes de Dégraissant Pro",
+    title: "Pack Dégrippant + Dégraissant WD40",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Maintenance & Chimie",
+    category: "Chimie & Maintenance",
     badge: "Le Pack à 24,90 €",
-    icon: "🧴",
-    description: "Promotion sur un lot de deux bombes de dégraissant : 24,90 € TTC.",
+    image: "./Lots/15.jpg",
+    description: "Le pack dégrippant + dégraissant WD40 à 24,90 €",
     promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 16,
-    title: "Gamme LMA (FACOM)",
+    title: "Gamme Vêtements LMA & FACOM",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Vêtements & Équipements Pro",
-    badge: "Remise -20%",
-    icon: "🦺",
-    description: "20 % de remise sur la gamme LMA (FACOM).",
-    promoCode: "FACOM-LMA20",
+    category: "Équipements & Vêtements Pro",
+    badge: "-20% de Remise",
+    image: "./Lots/16.jpg",
+    description: "20 % de remise sur la gamme de vêtements LMA et FACOM",
+    promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 17,
-    title: "Opération Bons d'Achat",
+    title: "Grandes Journées Bons d'Achat",
     subtitle: "Grandblaise Leroy – Schoettlé",
     category: "Tous Rayons Confondus",
-    badge: "15 € Offerts par 100 €",
-    icon: "🎟️",
-    description: "15 € offerts tous les 100 € d'achat (tous rayons confondus).",
+    badge: "15 € par 100 €",
+    image: "./Lots/17.jpg",
+    description: "15 € offerts tous les 100 € d'achat (tous rayons confondus)",
     promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 18,
-    title: "Offre Système de Freinage",
+    title: "Freinage BOSCH ou ISOTECH",
     subtitle: "Grandblaise Leroy – Schoettlé",
     category: "Sécurité & Freinage",
     badge: "Plaquettes Offertes !",
-    icon: "🛑",
-    description: "Offre commerciale : pour l'achat de disques de frein, les plaquettes de frein BOSCH / ISOTECH sont offertes.",
+    image: "./Lots/18.jpg",
+    description: "Pour l'achat de disques de frein, les plaquettes de frein sont offertes. Valable sur les marques Bosch ou Isotech.",
     promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 19,
-    title: "Garage pour Enfants BOSCH",
+    title: "Jeu Concours : Garage Enfants BOSCH",
     subtitle: "Grandblaise Leroy – Schoettlé",
     category: "Jeu Concours Famille",
     badge: "Jeu Concours 🎁",
-    icon: "🏎️",
-    description: "Jeu concours : remportez un garage pour enfants BOSCH.",
+    image: "./Lots/19.jpg",
+    description: "Jeu concours : jouez et tenter de remporter un garage pour enfant BOSCH (1 gagnant par département)",
     promoCode: null,
     linkText: "Participer au jeu en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 20,
-    title: "Bon d'Achat Privilège",
+    title: "Bon d’Achat à Offrir",
     subtitle: "Grandblaise Leroy – Schoettlé",
     category: "Privilège de Noël",
-    badge: "Bon Offert",
-    icon: "🎁",
-    description: "1 bon d'achat offert.",
-    promoCode: "CADEAU-NOEL20",
+    badge: "Idée Cadeau",
+    image: "./Lots/20.jpg",
+    description: "Pensez au bon d’achat à offrir",
+    promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 21,
-    title: "Consommables de Bricolage",
+    title: "Outillage FACOM x Esteban Ocon",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Consommables Atelier",
-    badge: "Promotion Fêtes",
-    icon: "🔩",
-    description: "Promotion sur une sélection de consommables de bricolage FACOM, Estéban et Occon.",
+    category: "Outillage de Précision",
+    badge: "Série Spéciale F1",
+    image: "./Lots/21.jpg",
+    description: "Offres spéciales sur une sélection d’outillage FACOM x Esteban Occon",
     promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 22,
-    title: "Accessoires & Outillage CLAS",
+    title: "Outillage & Accessoires CLAS",
     subtitle: "Grandblaise Leroy – Schoettlé",
     category: "Outillage Spécialisé",
-    badge: "10% en Cagnotte",
-    icon: "🛠️",
-    description: "10 % en cagnotte dès 100 € d'achat sur une large sélection d'accessoires CLAS (clés à choc, clés dynamométriques, jeux de douilles, coffrets à cliquet, etc.).",
+    badge: "10% en Bon d'Achat",
+    image: "./Lots/22.jpg",
+    description: "Dès 100€ d’achat sur une sélection d’outillage CLAS, profitez de 10 % de bon d’achat (clés à choc, clés dynamométriques, jeux de douilles, coffrets à cliquet, pince à collier, set de tournevis, clé à filtre à huile, lampe frontale double bandeau)",
     promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   },
   {
     day: 23,
-    title: "Sélection LEVEROK & Grand Tirage",
+    title: "Offre Sélection LEVEROK",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Cagnotte & Tirage au Sort",
+    category: "Fidélité & Outillage",
     badge: "J-1 Avant Noël",
-    icon: "🌟",
-    description: "20 % de cagnotte à partir de 3 articles LEVEROK achetés + tirage au sort pour préparer le grand cadeau de demain (24 décembre) !",
+    image: "./Lots/23.jpg",
+    description: "20 % remboursés en bon d’achat pour l’achat de 3 produits LEVEROK",
     promoCode: null,
     linkText: "En savoir plus en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
@@ -309,12 +307,12 @@ const adventGifts = [
     day: 24,
     title: "Le Grand Tirage au Sort du Réveillon",
     subtitle: "Grandblaise Leroy – Schoettlé",
-    category: "Prestige Réveillon de Noël",
-    badge: "Grand Tirage au Sort 🎄",
-    icon: "🧖‍♀️",
-    description: "Grand Tirage au Sort : remportez 2 entrées (valables pour 2 personnes) de 3 heures au Spa de Ribeauvillé !",
+    category: "Grand Prix de Noël",
+    badge: "Spa de Ribeauvillé 🎄",
+    image: "./Lots/24.jpg",
+    description: "Grand Tirage au Sort des 2 entrées de 3 heures au Spa de Ribeauvillé",
     promoCode: null,
-    linkText: "Découvrir les modalités du tirage au sort",
+    linkText: "Modalités en magasin & atelier",
     linkUrl: "https://www.grandblaise-leroy.fr"
   }
 ];
@@ -339,7 +337,7 @@ class AdventCalendar {
     this.toastContainer = document.getElementById('toastContainer');
 
     // Éléments Modale
-    this.modalGiftIcon = document.getElementById('modalGiftIcon');
+    this.modalImage = document.getElementById('modalImage');
     this.modalDayTag = document.getElementById('modalDayTag');
     this.modalBadge = document.getElementById('modalBadge');
     this.modalCategory = document.getElementById('modalCategory');
@@ -447,7 +445,7 @@ class AdventCalendar {
   }
 
   /**
-   * Rendu visuel des 24 cases (Design festif sans image externe)
+   * Rendu visuel des 24 cases (Avec affichage dynamique de l'image de Lots)
    */
   renderGrid() {
     this.grid.innerHTML = '';
@@ -476,10 +474,10 @@ class AdventCalendar {
 
       door.innerHTML = `
         <div class="door-card">
-          <!-- Face Arrière : Design festif du cadeau révélé -->
+          <!-- Face Arrière : Visuel du lot & informations -->
           <div class="door-back">
+            <img src="${gift.image}" alt="${gift.title}" class="door-back-img" loading="lazy">
             <span class="door-back-badge">${gift.badge}</span>
-            <div class="door-back-icon">${gift.icon || '🎁'}</div>
             <div class="door-back-caption">${gift.title}</div>
           </div>
           <!-- Face Avant : Volet de fête Noël & dorures -->
@@ -554,11 +552,12 @@ class AdventCalendar {
   }
 
   /**
-   * Ouverture de la modale avec détails du lot
+   * Ouverture de la modale avec détails et image du lot
    */
   openModal(gift) {
-    if (this.modalGiftIcon) {
-      this.modalGiftIcon.textContent = gift.icon || '🎁';
+    if (this.modalImage) {
+      this.modalImage.src = gift.image;
+      this.modalImage.alt = gift.title;
     }
     this.modalDayTag.textContent = `Case ${gift.day} Décembre`;
     this.modalBadge.textContent = gift.badge || "Surprise";
@@ -809,19 +808,21 @@ class AdventCalendar {
     });
 
     // Copie du code promo
-    this.btnCopyPromo.addEventListener('click', () => {
-      if (this.currentPromoToCopy) {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(this.currentPromoToCopy).then(() => {
-            this.showToast(`Code promo "${this.currentPromoToCopy}" copié ! 🏷️`);
-          }).catch(() => {
+    if (this.btnCopyPromo) {
+      this.btnCopyPromo.addEventListener('click', () => {
+        if (this.currentPromoToCopy) {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(this.currentPromoToCopy).then(() => {
+              this.showToast(`Code promo "${this.currentPromoToCopy}" copié ! 🏷️`);
+            }).catch(() => {
+              this.showToast(`Code promo : ${this.currentPromoToCopy}`);
+            });
+          } else {
             this.showToast(`Code promo : ${this.currentPromoToCopy}`);
-          });
-        } else {
-          this.showToast(`Code promo : ${this.currentPromoToCopy}`);
+          }
         }
-      }
-    });
+      });
+    }
   }
 
   /**
