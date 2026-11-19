@@ -35,9 +35,7 @@ const adventGifts = [
     badge: "Microfibre Offerte",
     image: "./Lots/1.jpg",
     description: "Dès 50 € d'achat sur toute la gamme de nettoyage automobile SHINE, une microfibre offerte",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 2,
@@ -47,9 +45,7 @@ const adventGifts = [
     badge: "Le Pack à 8,99 €",
     image: "./Lots/2.jpg",
     description: "Le pack dégivrant et lave-glace hiver à 8,99€",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 3,
@@ -59,9 +55,7 @@ const adventGifts = [
     badge: "-20% de Remise",
     image: "./Lots/3.jpg",
     description: "20 % de remise sur une sélection d'éclairage ISOTECH (petite, moyenne et grande baladeuses, frontale, projecteur, lampe de capot, mini-projecteur LED et lampe stylo)",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 4,
@@ -71,9 +65,7 @@ const adventGifts = [
     badge: "20% en Bon d'Achat",
     image: "./Lots/4.jpg",
     description: "20 % remboursés en bon d’achat pour l’achat de 3 produits LEVEROK",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 5,
@@ -83,9 +75,7 @@ const adventGifts = [
     badge: "Jeu Concours 🎁",
     image: "./Lots/5.jpg",
     description: "Jeu concours : devinez le prix et remportez la boîte à outils LEVEROK (1 gagnant par département)",
-    promoCode: null,
-    linkText: "Participer au jeu en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 6,
@@ -95,9 +85,7 @@ const adventGifts = [
     badge: "Saint-Nicolas 🎁",
     image: "./Lots/6.jpg",
     description: "Jeu concours : devinez le produit mystère ? (1 gagnant par département)",
-    promoCode: null,
-    linkText: "Participer au jeu en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 7,
@@ -107,9 +95,7 @@ const adventGifts = [
     badge: "Le Pack à 119,80 €",
     image: "./Lots/7.jpg",
     description: "Le pack de rénovateur d’optique de phare Holts + la polisseuse Leverok à 119.80€",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 8,
@@ -119,9 +105,7 @@ const adventGifts = [
     badge: "Offres Exclusives",
     image: "./Lots/8.jpg",
     description: "Offres exclusives sur les coffrets d’ampoules OSRAM en H1-H7, H4 et H7",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 9,
@@ -131,9 +115,7 @@ const adventGifts = [
     badge: "Jusqu'à 50€ Offerts",
     image: "./Lots/9.jpg",
     description: "Pour l’achat d’un compresseur 50L Isotech, 40€ de bon d’achat / Pour l’achat d’un compresseur 100L Isotech, 50€ de bon d’achat",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 10,
@@ -143,9 +125,7 @@ const adventGifts = [
     badge: "15€ Remboursés",
     image: "./Lots/10.jpg",
     description: "Offres exclusives sur la sélection batterie, charge et démarrage du dépliant. 15€ remboursé sur la reprise sur votre ancienne batterie.",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 11,
@@ -155,9 +135,7 @@ const adventGifts = [
     badge: "Jusqu'à 60€ en Bon",
     image: "./Lots/11.jpg",
     description: "Profitez de 20 € de bon d’achat sur la mallette de maintenance ISOTECH / 40€ de bon d’achat sur la servante LEVEROK / 60€ de bon d’achat sur la servante ISOTECH",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 12,
@@ -167,9 +145,7 @@ const adventGifts = [
     badge: "Jeu Concours 🎁",
     image: "./Lots/12.jpg",
     description: "Jeu concours : devinez le produit mystère ? (1 gagnant par département)",
-    promoCode: null,
-    linkText: "Participer au jeu en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 13,
@@ -179,9 +155,7 @@ const adventGifts = [
     badge: "Jeu Concours 🎁",
     image: "./Lots/13.jpg",
     description: "Jeu concours : devinez le prix et remportez le mini-coffret à cliquet CLAS (1 gagnant par département)",
-    promoCode: null,
-    linkText: "Participer au jeu en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 14,
@@ -191,9 +165,7 @@ const adventGifts = [
     badge: "Édition McLaren",
     image: "./Lots/14.jpg",
     description: "Offres exclusives sur l’outillage DEWALT x McLaren",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 15,
@@ -203,9 +175,7 @@ const adventGifts = [
     badge: "Le Pack à 24,90 €",
     image: "./Lots/15.jpg",
     description: "Le pack dégrippant + dégraissant WD40 à 24,90 €",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 16,
@@ -215,9 +185,7 @@ const adventGifts = [
     badge: "-20% de Remise",
     image: "./Lots/16.jpg",
     description: "20 % de remise sur la gamme de vêtements LMA et FACOM",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 17,
@@ -227,9 +195,7 @@ const adventGifts = [
     badge: "15 € par 100 €",
     image: "./Lots/17.jpg",
     description: "15 € offerts tous les 100 € d'achat (tous rayons confondus)",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 18,
@@ -239,9 +205,7 @@ const adventGifts = [
     badge: "Plaquettes Offertes !",
     image: "./Lots/18.jpg",
     description: "Pour l'achat de disques de frein, les plaquettes de frein sont offertes. Valable sur les marques Bosch ou Isotech.",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 19,
@@ -251,9 +215,7 @@ const adventGifts = [
     badge: "Jeu Concours 🎁",
     image: "./Lots/19.jpg",
     description: "Jeu concours : jouez et tenter de remporter un garage pour enfant BOSCH (1 gagnant par département)",
-    promoCode: null,
-    linkText: "Participer au jeu en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 20,
@@ -263,9 +225,7 @@ const adventGifts = [
     badge: "Idée Cadeau",
     image: "./Lots/20.jpg",
     description: "Pensez au bon d’achat à offrir",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 21,
@@ -275,9 +235,7 @@ const adventGifts = [
     badge: "Série Spéciale F1",
     image: "./Lots/21.jpg",
     description: "Offres spéciales sur une sélection d’outillage FACOM x Esteban Occon",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 22,
@@ -287,9 +245,7 @@ const adventGifts = [
     badge: "10% en Bon d'Achat",
     image: "./Lots/22.jpg",
     description: "Dès 100€ d’achat sur une sélection d’outillage CLAS, profitez de 10 % de bon d’achat (clés à choc, clés dynamométriques, jeux de douilles, coffrets à cliquet, pince à collier, set de tournevis, clé à filtre à huile, lampe frontale double bandeau)",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 23,
@@ -299,9 +255,7 @@ const adventGifts = [
     badge: "J-1 Avant Noël",
     image: "./Lots/23.jpg",
     description: "20 % remboursés en bon d’achat pour l’achat de 3 produits LEVEROK",
-    promoCode: null,
-    linkText: "En savoir plus en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   },
   {
     day: 24,
@@ -311,9 +265,7 @@ const adventGifts = [
     badge: "Spa de Ribeauvillé 🎄",
     image: "./Lots/24.jpg",
     description: "Grand Tirage au Sort des 2 entrées de 3 heures au Spa de Ribeauvillé",
-    promoCode: null,
-    linkText: "Modalités en magasin & atelier",
-    linkUrl: "https://www.grandblaise-leroy.fr"
+    promoCode: null
   }
 ];
 
@@ -347,8 +299,6 @@ class AdventCalendar {
     this.promoBox = document.getElementById('promoBox');
     this.promoCodeText = document.getElementById('promoCodeText');
     this.btnCopyPromo = document.getElementById('btnCopyPromo');
-    this.modalLink = document.getElementById('modalLink');
-    this.modalLinkText = document.getElementById('modalLinkText');
 
     // Développeur Toolbar
     this.devToolbar = document.getElementById('devToolbar');
@@ -574,15 +524,6 @@ class AdventCalendar {
     } else {
       this.promoBox.style.display = 'none';
       this.currentPromoToCopy = null;
-    }
-
-    // Bouton de lien
-    if (gift.linkUrl) {
-      this.modalLink.href = gift.linkUrl;
-      this.modalLinkText.textContent = gift.linkText || "En savoir plus en magasin";
-      this.modalLink.style.display = 'inline-flex';
-    } else {
-      this.modalLink.style.display = 'none';
     }
 
     this.modal.classList.add('is-active');
